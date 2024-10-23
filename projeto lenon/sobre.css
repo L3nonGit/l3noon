@@ -1,0 +1,55 @@
+.content {
+    background-size: 115%;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.title {
+    color: aliceblue;
+    text-align: center;
+    text-shadow: 5px 5px 5px black;
+
+    
+}
+
+.sobre{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 10%;
+    
+}
+
+
+.caard {
+    display: inline-block;
+    width: 30%;
+    padding: 20px;
+    margin: 1%;
+    border: 1px solid blue;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.caard:hover {
+    background-color: aqua;
+    color: black;
+    padding: 40px;
+    
+}
+
+.card-a {
+    font-weight: bold;
+    
+}
+
+.foto {
+    margin-bottom: 20%;
+    margin-left: 55%;
+}
+
+
+
+
+

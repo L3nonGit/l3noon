@@ -1,0 +1,200 @@
+/*padrão para iniciar um css em site*/
+* { 
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    
+}
+
+.navegação {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100px;
+    background-color: aqua;
+    justify-content: center; /*analisar*/
+    align-items: center;/*analisar*/
+    position: fixed;
+    width: 100%;
+}
+
+.logo {
+    flex: 20%;
+    margin-left: 5%;
+   /* border: 1px solid red;*/
+    text-align: left;
+    font-size: 20px;
+    ;
+}
+
+.logo h1{
+    font-family: 'Lobster', cursive ;
+}
+
+.menu {
+    flex: 70%;
+   /* border: 1px solid blue;*/
+    text-align: right;
+    padding: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding:  20px 16px;
+}
+
+.menu a:hover{
+    color: black;
+    border-top: 4px solid blue;
+}
+/*tag id é superior as classes */
+#botao{
+    background-color: blue;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 5px;
+    margin-right: 15%;
+    margin-left: 5%;
+}
+
+#botao:hover{
+    border: none;
+    background-color: black;
+}
+
+.header{
+    display: flex;
+    flex-flow: row wrap;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    background: gray;
+    padding-top: 100px;
+}    
+
+
+
+.headline{
+    margin-left: 10%;
+    flex: 40%;
+    /* border: 1px solid red; */
+    
+}
+
+.headline h2{
+    font-weight: 900;
+    font-size: 20px;
+    color: blue;
+    padding: 0;
+    margin: 0;
+}
+
+.img-headline{
+    margin-right: 10%;
+    flex: 40%;
+    /*border: 1px solid green;*/
+    text-align: center;
+
+}
+
+.headline p{
+    color: black;
+    text-align: left;
+}
+
+.contact{
+    display: inline-block;
+    background-color: black;
+    padding:20px;
+    color: red;
+    text-transform: uppercase; /*letras maiusculas*/
+    border-radius: 5px;
+    text-decoration: none;
+
+    
+}
+.contact:hover{
+    background-color: white;
+}
+
+section{
+    display: inline-block;
+    margin-top: 80px;
+    /* border: 1px solid black;  */
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 5%;
+    text-align: center;
+}
+
+section h2{
+    width: 100%;
+    font-size: 50px;
+    margin:0;
+    font-family: 'Lobster', cursive;
+    font-weight: bold; /*letras em negrito*/
+    color: blue;
+}
+.serviços{
+    display: inline-block;
+    margin-top: 5%;
+}
+
+
+.card{
+    display: inline-block;
+    width: 30%;
+    padding: 20px;
+    margin: 1%;
+    border: 1px solid blue;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.texto-oculto{
+    display: none;
+}
+
+.card:hover{
+    background-color: chartreuse;
+    color: aliceblue;
+    padding: 40px;
+}
+
+.card:hover .card-text{
+    display: none;
+}
+
+.card:hover .texto-oculto{
+    display: block;
+}
+
+.texto-oculto{
+    display: none;
+}
+
+
+footer{
+    margin-top: 100px;
+    height: 400px;
+    background-image:linear-gradient(180deg, aqua,white,blue);
+    text-align: center;
+    border-top: 5px solid blue;
+}
+
+.logo-rodape{
+    padding: 100px;
+}
+
+.agencia{
+    font-family: 'Lobster', cursive;
+    color: black;
+    font-size: 34px;
+}
+
+
+
+
