@@ -1,0 +1,40 @@
+{
+  "events": [
+    {
+      "id": "seed-1",
+      "title": "Reunião de Planejamento",
+      "start": "2025-08-10T09:00:00",
+      "end": "2025-08-10T10:00:00",
+      "description": "Sprint planning com a equipe",
+      "color": "#4285f4",
+      "category": "trabalho"
+    },
+    {
+      "id": "seed-2",
+      "title": "Consulta Médica",
+      "start": "2025-08-12T15:00:00",
+      "end": "2025-08-12T16:00:00",
+      "description": "Clínica Central",
+      "color": "#ea4335",
+      "category": "pessoal"
+    },
+    {
+      "id": "seed-3",
+      "title": "Feriado Nacional",
+      "start": "2025-09-07",
+      "end": "2025-09-08",
+      "description": "Independência do Brasil",
+      "color": "#9c27b0",
+      "category": "feriados"
+    },
+    {
+      "id": "seed-4",
+      "title": "1:1 com Gestor",
+      "start": "2025-08-15T11:00:00",
+      "end": "2025-08-15T11:30:00",
+      "description": "Acompanhamento quinzenal",
+      "color": "#34a853",
+      "category": "meu"
+    }
+  ]
+}

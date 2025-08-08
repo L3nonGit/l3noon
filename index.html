@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agsysten</title>
+  <!-- FullCalendar CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/main.min.css" rel="stylesheet" />
+  <!-- Google fonts (fallbacks in CSS) -->
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/workspace/CD.css" />
+</head>
+<body>
+  <div class="app-conteiner"></div>
+  <header class="header">
+    <div class="header-left">
+      <div class="menu-button" title="Menu">
+        <span class="material-icons">menu</span>
+      </div>
+      <div class="logo">
+        <span class="material-icons">event</span>
+        <span class="logo-text">Agsysten</span>
+      </div>
+    </div>
+
+    <div class="header-center">
+      <div class="view-controls">
+        <button class="view-btn active" data-view="dayGridmonth">Mês</button>
+        <button class="view-btn" data-view="timeGridweek">Semana</button>
+        <button class="view-btn" data-view="timeGriday">Dia</button>
+        <button class="view-btn" data-view="listweek">Lista</button>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <div class="search-box">
+        <span class="material-icons">search</span>
+        <input type="text" placeholder="Pesquise eventos" />
+      </div>
+      <button class="create-event-btn" title="Criar evento">
+        <span class="material-icons">add</span>
+        Criar
+      </button>
+      <button class="theme-toggle-btn" id="themeToggle" title="Alternar tema">
+        <span class="material-icons">dark_mode</span>
+      </button>
+      <div class="user-avatar" title="Perfil">
+        <span class="material-icons">account_circle</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="main-content">
+    <aside class="sidebar">
+      <div class="user-type-selector">
+        <h3>Tipo de usuário</h3>
+        <div class="user-type-buttons">
+          <button class="user-type-btn active" data-type="gestor">
+            <span class="material-icons">admin_panel_settings</span>
+            Gestor
+          </button>
+          <button class="user-type-btn" data-type="funcionario">
+            <span class="material-icons">person</span>
+            Funcionário
+          </button>
+        </div>
+      </div>
+
+      <div class="mini-calendar-section">
+        <h3>Calendário</h3>
+        <div id="miniCalendar"></div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Calendários</h3>
+        <div class="calendar-list">
+          <div class="calendar-item active">
+            <div class="calendar-color" style="background-color: white;"></div>
+            <span>Meu calendário</span>
+          </div>
+          <div class="calendar-item">
+            <div class="calendar-color" style="background-color: black;"></div>
+            <span>Trabalho</span>
+          </div>
+          <div class="calendar-item">
+            <div class="calendar-color" style="background-color: blue;"></div>
+            <span>Pessoal</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Outros Calendários</h3>
+        <div class="calendar-list">
+          <div class="calendar-item">
+            <div class="calendar-color" style="background-color: blueviolet;"></div>
+            <span>Feriados</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="calendar-area">
+      <div id="calendar"></div>
+    </main>
+  </div>
+
+  <div id="eventModal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true">
+      <div class="modal-header">
+        <h2 id="modalTitle">Novo Evento</h2>
+        <span class="close" role="button" aria-label="Fechar">&times;</span>
+      </div>
+      <div class="modal-body">
+        <form id="eventForm">
+          <div class="form-group">
+            <label for="eventTitle">Título</label>
+            <input type="text" id="eventTitle" required />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="eventStart">Início</label>
+              <input type="datetime-local" id="eventStart" required />
+            </div>
+            <div class="form-group">
+              <label for="eventEnd">Fim</label>
+              <input type="datetime-local" id="eventEnd" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="eventDescription">Descrição</label>
+            <textarea id="eventDescription" rows="3"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="eventColor">Cor</label>
+            <select id="eventColor">
+              <option value="#4285f4">Azul</option>
+              <option value="#ea4335">Vermelho</option>
+              <option value="#34a853">Verde</option>
+              <option value="#fbbc04">Amarelo</option>
+              <option value="#9c27b0">Roxo</option>
+            </select>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" id="deleteEvent" class="btn-danger" style="display: none;">Excluir</button>
+            <div class="form-actions-right">
+              <button type="button" id="cancelEvent" class="btn-secondary">Cancelar</button>
+              <button type="submit" class="btn-primary">Salvar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- FullCalendar JS -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
+  <!-- App JS -->
+  <script src="/workspace/script.js"></script>
+</body>
+</html>
